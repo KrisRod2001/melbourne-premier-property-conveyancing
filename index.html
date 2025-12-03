@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="First Class Legal – Melbourne’s premier property conveyancing specialists delivering fast, accurate and stress-free property settlements across Victoria."">
+    <title>First Class Legal | Melbourne & Victoria’s Premier Property Conveyancing Experts</title>
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.firstclasslegal.com.au/">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1a3b5d;
+            --secondary: #d4af37;
+            --dark: #0f1e2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.4s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: var(--light);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--secondary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Hero */
+        .hero {
+            background: linear-gradient(rgba(26,59,93,0.85), rgba(15,30,46,0.9)), url('https://images.unsplash.com/photo-1582408921715-18e7806365c1?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+            color: white;
+            padding: 180px 0 120px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            box-shadow: 0 8px 25px rgba(212,175,55,0.3);
+        }
+
+        .btn:hover {
+            background: #b8941f;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(212,175,55,0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About */
+        #about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+            justify-content: center;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary);
+            display: block;
+        }
+
+        /* Services */
+        #services {
+            background: #f9f9f9;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .service-card i {
+            font-size: 3.5rem;
+            color: var(--secondary);
+            margin-bottom: 25px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+        }
+
+        /* Why Choose Us */
+        #why-us {
+            background: white;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+
+        .feature-text h4 {
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+        }
+
+        /* Process */
+        #process {
+            background: #f1f5f9;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            background: var(--secondary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            position: relative;
+            font-style: italic;
+        }
+
+        .testimonial::before {
+            content: '“';
+            font-size: 6rem;
+            color: var(--secondary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .stars {
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(rgba(26,59,93,0.95), rgba(15,30,46,0.98)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .cta h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #ccc;
+            padding: 80px 0 30px;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 40px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            .hero { padding: 140px 0 100px; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .section-title h2 { font-size: 2.3rem; }
+            .cta h2 { font-size: 2.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>First Class Legal</h1>
+            <p>Victoria’s Most Trusted Property Conveyancing & Settlement Specialists Since 2008</p>
+            <p>Fixed-fee conveyancing | 7 days a week | Same-day contract reviews | 100% digital process</p>
+            <a href="https://www.firstclasslegal.com.au/" class="btn">Get Your Free Conveyancing Quote Today</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Melbourne Trusts First Class Legal</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Premium Conveyancing. Personal Service. Peace of Mind.</h3>
+                    <p>First Class Legal has been Victoria’s leading independent conveyancing firm for over 15 years. Founded by licensed conveyancer Sarah Mitchell in 2008, we have helped more than 25,000 Victorians buy, sell and transfer property with absolute confidence.</p>
+                    <p>We combine old-fashioned personal service with cutting-edge digital technology to deliver the fastest, most accurate settlements in the state — all at transparent fixed fees with no hidden costs.</p>
+                    <p>From first-home buyers in Geelong to multi-million dollar property investors in Toorak, every client receives the same exceptional attention to detail that has earned us a 4.9/5 star rating from thousands of independent reviews.</p>
+                    <p>Unlike many larger firms, you’ll always deal directly with your dedicated licensed conveyancer — never a junior or call centre. We answer our phones 7 days a week and pride ourselves on same-day responses.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=800" alt="First Class Legal Team" style="width:100%; border-radius:12px; box-shadow:0 15px 40px rgba(0,0,0,0.15);">
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">25,000+</span>
+                    <p>Properties Settled</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9/5</span>
+                    <p>Client Rating</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <p>Fixed Fee Guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Conveyancing Services Across Victoria</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Residential Conveyancing</h3>
+                    <p>Purchasing or selling houses, units, townhouses or vacant land anywhere in Victoria. We handle Section 32 preparation, contract reviews, PEXA settlements and all council & authority searches.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3>Off-The-Plan & New Developments</h3>
+                    <p>Specialist expertise in off-the-plan apartments, house & land packages, and subdivision purchases. Sunset clause advice, developer liaison, and staged settlement management.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Family Transfers & Gifts</h3>
+                    <p>Love & affection transfers between spouses, parents and children with maximum stamp duty exemptions. Deceased estate transfers and survivorship applications.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Property Settlements & Title Transfers</h3>
+                    <p>Divorce & separation property settlements, related party transfers, trust & company title changes, and caveat removals.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Investment & Commercial</h3>
+                    <p>Commercial leases, retail shop conveyancing, SMSF property purchases, and investment portfolio management across multiple properties.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Regional & Rural Victoria</h3>
+                    <p>Specialist knowledge of Crown land, water rights, farming zones and large rural holdings throughout Gippsland, Mornington Peninsula, Bellarine and beyond.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Thousands Choose First Class Legal Every Year</h2>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="feature-text">
+                        <h4>Licensed Conveyancers & Lawyers</h4>
+                        <p>All work performed by Victorian-licensed professionals with professional indemnity insurance exceeding $10 million.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <div class="feature-text">
+                        <h4>7-Day Service & Same-Day Responses</h4>
+                        <p>We work weekends and public holidays. Contract reviews returned same business day — guaranteed.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-lock"></i>
+                    <div class="feature-text">
+                        <h4>100% Fixed Fees – No Surprises</h4>
+                        <p>Transparent upfront pricing. If extra work is required due to complexity, we absorb the cost.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="feature-text">
+                        <h4>Fully Digital & Paperless</h4>
+                        <p>PEXA electronic settlements, electronic signing, online progress tracking 24/7.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <div class="feature-text">
+                        <h4>Your Own Dedicated Conveyancer</h4>
+                        <p>No call centres. Direct mobile and email access to the person handling your file.</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="fas fa-gift"></i>
+                    <div class="feature-text">
+                        <h4>First Home Buyer Bonus Pack</h4>
+                        <p>Free contract review (worth $440) for all Victorian first home buyers + FHOG assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Simple 5-Step Conveyancing Process</h2>
+            </div>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Quote & Engagement</h3>
+                    <p>Receive your instant fixed-fee quote online or over the phone. Sign engagement letter digitally in under 2 minutes.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Contract Review & Advice</h3>
+                    <p>We review your contract and provide plain-English advice on special conditions, inclusions, and potential issues.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Searches & Due Diligence</h3>
+                    <p>We order and analyse all required searches (council, water, land tax, owners corporation, etc).</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Pre-Settlement Preparation</h3>
+                    <p>Adjustments calculated, transfer documents prepared, stamp duty & lodgement with SRO and Titles Office.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Settlement Day</h3>
+                    <p>Electronic settlement via PEXA. Funds transferred, keys released. You receive confirmation within minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>“Absolutely outstanding service. Sarah handled our Toorak mansion purchase flawlessly. Communication was exceptional throughout. Highly recommend First Class Legal to anyone buying in Melbourne.”</p>
+                    <strong>— James & Rebecca, Toorak</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>“As first home buyers we were nervous, but the team made everything so easy. They saved us from a dodgy contract and got us into our new home stress-free. Worth every cent.”</p>
+                    <strong>— Michael & Jess, Geelong</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>“Used them for three investment properties now. Fixed fees, fast settlements, always available. Simply the best conveyancers in Victoria.”</p>
+                    <strong>— David Chen, Property Investor</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience First-Class Conveyancing?</h2>
+            <p>Get your obligation-free fixed-fee quote in under 60 seconds</p>
+            <br>
+            <a href="https://www.firstclasslegal.com.au/" class="btn">Get Instant Quote Now</a>
+            <p style="margin-top: 30px; font-size:1.1rem;">Or call us 7 days: <strong>1300 00 3534</strong></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://www.firstclasslegal.com.au/">Home</a>
+                <a href="https://www.firstclasslegal.com.au/services">Services</a>
+                <a href="https://www.firstclasslegal.com.au/about">About</a>
+                <a href="https://www.firstclasslegal.com.au/contact">Contact</a>
+                <a href="https://www.firstclasslegal.com.au/privacy">Privacy Policy</a>
+            </div>
+            <p>&copy; 2025 First Class Legal. Victoria’s Trusted Conveyancing Specialists.<br>
+            <a href="https://www.firstclasslegal.com.au/" style="color:var(--secondary);">https://www.firstclasslegal.com.au</a></p>
+        </div>
+    </footer>
+</body>
+</html>
